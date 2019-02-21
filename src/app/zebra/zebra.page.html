@@ -1,9 +1,13 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>zebra</ion-title>
+    <ion-title>{{title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-
+<ion-list>
+  <ion-item *ngFor="let animal of animals">
+    <p>the {{animal.name}} says {{animal.sound}}</p>
+  </ion-item>
+</ion-list>
 </ion-content>

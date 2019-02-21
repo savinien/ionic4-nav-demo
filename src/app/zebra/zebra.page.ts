@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Animal, DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-zebra',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ZebraPage implements OnInit {
 
-  constructor() { }
+  animals: Animal[];
+  title: string;
+
+  constructor(private data: DataService) { }
 
   ngOnInit() {
+    this.animals = this.data.getAnimals();
+    console.log("animals data retrieved from service: ", this.animals);
+    this.title = "Welcome to zebra page!";
   }
 
+  
 }
