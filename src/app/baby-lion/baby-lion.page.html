@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>baby-lion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<ion-card>
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        Retour au lion: cliquer en haut à gauche...
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label [routerLink]="['/home']">
+        Back Home
+      </ion-label>
+    </ion-item>
+    <ion-item (click)="navToZebra()">
+      <ion-label>
+        Check out the zebra page
+      </ion-label>
+    </ion-item> 
+  </ion-list>
+</ion-card>
+</ion-content>
